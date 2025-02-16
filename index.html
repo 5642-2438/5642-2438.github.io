@@ -11,31 +11,33 @@
         color: #ff0000;
         font-family: "Press Start 2P", monospace;
         margin: 0;
-        padding: 100px;
+        padding: 20px;
         display: flex;
         justify-content: center;
       }
       .main-container {
         display: flex;
-        width: 80%;
+        width: 90%;
+        max-width: 1200px;
         justify-content: center;
         align-items: flex-start;
         border: 2px solid #ff0000;
         padding: 20px;
+        flex-wrap: wrap;
+        position: relative;
       }
       .container {
-        width: 85%;
+        flex: 1;
         padding: 20px;
+        text-align: center;
       }
       .header {
-        text-align: center;
         font-size: 24px;
         color: #ff00ff;
         text-shadow: 2px 2px 5px black;
         padding: 10px;
       }
       .status {
-        text-align: center;
         color: yellow;
         font-size: 14px;
       }
@@ -51,7 +53,6 @@
         text-decoration: none;
       }
       .content {
-        text-align: center;
         padding: 20px;
         font-size: 16px;
         line-height: 1.6;
@@ -60,15 +61,29 @@
         color: yellow;
       }
       .sidebar {
-        width: 160px;
+        width: 200px;
         padding: 20px;
         border-left: 2px solid #ff0000;
+        text-align: left;
+        position: relative;
       }
       .sidebar a {
         display: block;
         color: #00ff00;
         text-decoration: none;
         margin-bottom: 10px;
+      }
+      @media (max-width: 768px) {
+        .main-container {
+          flex-direction: column;
+          align-items: center;
+        }
+        .sidebar {
+          width: 100%;
+          border-left: none;
+          background: none;
+          text-align: center;
+        }
       }
     </style>
   </head>
